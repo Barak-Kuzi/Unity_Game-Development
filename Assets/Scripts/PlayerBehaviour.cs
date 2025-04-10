@@ -1,10 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     public GameObject playerCamera; // must be connected to a camera in Unity
     CharacterController controller;
-    float speed = 0.05f;
+    float speed = 0.075f;
     float angularSpeed = 3.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
