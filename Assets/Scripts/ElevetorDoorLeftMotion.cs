@@ -21,13 +21,13 @@ public class ElevetorDoorLeftMotion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        animator.SetBool("isOpen", true);
+        animator.SetBool("StateOpen", true);
         sound.PlayDelayed(0.8f);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        animator.SetBool("isOpen", false);
+        animator.SetBool("StateOpen", false);
         sound.PlayDelayed(0.8f);
     }
 }

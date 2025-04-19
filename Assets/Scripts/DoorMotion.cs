@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorMotion : MonoBehaviour
+public class ACustomDoorMotion : MonoBehaviour
 {
     Animator animator;
     AudioSource sound;

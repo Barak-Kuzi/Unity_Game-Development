@@ -6,12 +6,14 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public GameObject playerCamera; // must be connected to a camera in Unity
     CharacterController controller;
-    float speed = 0.075f;
+    float speed = 0.05f;
     float angularSpeed = 3.0f;
+    AudioSource footStepSnd;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        footStepSnd = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,13 @@ public class PlayerBehaviour : MonoBehaviour
         // trsforms motion to local coordinates
         motion = transform.TransformDirection(motion);
         controller.Move(motion);
-        
+
+        if(dx != 0 || dz != 0)
+        {
+            if(!footStepSnd.isPlaying)
+            {
+                footStepSnd.Play();
+            }
+        }
     }
 }

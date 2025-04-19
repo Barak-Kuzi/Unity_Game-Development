@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevetorDoorRightMotion : MonoBehaviour
+public class DoubleDoorMotion : MonoBehaviour
 {
     Animator animator;
     // Start is called before the first frame update
@@ -19,11 +17,11 @@ public class ElevetorDoorRightMotion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        animator.SetBool("StateOpen", true);
+        animator.SetBool("isOpen_Obj_1", true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        animator.SetBool("StateOpen", false);
+        animator.SetBool("isOpen_Obj_1", false);
     }
 }
