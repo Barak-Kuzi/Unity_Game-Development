@@ -22,12 +22,13 @@ public class DoorMotion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         animator.SetBool("OpenState", true);
-        sound.PlayDelayed(0.8f);
+        // sound.PlayDelayed(0.8f);
+        sound.Play();
     }
 
     private void OnTriggerExit(Collider other)
     {
         animator.SetBool("OpenState", false);
-        sound.PlayDelayed(0.8f);
+        sound.PlayDelayed(0.7f);
     }
 }
